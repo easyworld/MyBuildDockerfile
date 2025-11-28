@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y curl python3-pip
 RUN dkp-pacman -Syu --noconfirm switch-glm switch-libjpeg-turbo hactool --needed
 
 # 使用 pip 安装 lz4 和 pycryptodome
-RUN pip install lz4 pycryptodome
+RUN pip install --no-cache-dir --break-system-packages lz4 pycryptodome
